@@ -66,7 +66,7 @@ public class StudentRecordFileManager {
         scanner.close();
     }
 
-    // Option 1: Create Records Directory using File.mkdir()
+    // Option 1
     private static void createDirectory(File dir) {
         if (!dir.exists()) {
             if (dir.mkdir()) {
@@ -79,7 +79,7 @@ public class StudentRecordFileManager {
         }
     }
 
-    // Option 2: Create Record File using exists() and createNewFile()
+    // Option 2
     private static void createRecordFile(File dir, File file) {
         try {
             if (!dir.exists()) {
@@ -100,7 +100,7 @@ public class StudentRecordFileManager {
         }
     }
 
-    // Option 3: Write record using FileOutputStream and getBytes()
+    // Option 3
     private static void writeRecord(Scanner scanner, File file) {
         System.out.print("Enter Student Record: ");
         String record = scanner.nextLine();
@@ -112,7 +112,7 @@ public class StudentRecordFileManager {
         }
     }
 
-    // Option 4: Display file metadata using File methods
+    // Option 4
     private static void displayFileInfo(File file) {
         if (file.exists()) {
             System.out.println("===== File Information =====");
@@ -127,7 +127,7 @@ public class StudentRecordFileManager {
         }
     }
 
-    // Option 5: Read byte-by-byte using FileInputStream
+    // Option 5
     private static void readFileContent(File file) {
         if (!file.exists()) {
             System.out.println("File does not exist.");
@@ -145,7 +145,7 @@ public class StudentRecordFileManager {
         }
     }
 
-    // Option 6: Append record using FileOutputStream(file, true)
+    // Option 6
     private static void appendRecord(Scanner scanner, File file) {
         System.out.print("Enter Student Record to Append: ");
         String record = "\n" + scanner.nextLine();
@@ -157,7 +157,7 @@ public class StudentRecordFileManager {
         }
     }
 
-    // Option 7: Delete file using delete()
+    // Option 7
     private static void deleteRecordFile(File file) {
         if (file.exists()) {
             if (file.delete()) {
