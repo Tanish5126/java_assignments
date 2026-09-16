@@ -11,7 +11,7 @@ public class Main {
         System.out.println("===== Smart Cab Booking System =====");
         System.out.println();
 
-        // Input passenger details
+  
         System.out.print("Enter Passenger ID: ");
         int id = sc.nextInt();
 
@@ -31,10 +31,10 @@ public class Main {
         System.out.print("Enter Pickup Location: ");
         String location = sc.nextLine();
 
-        // Enum
+    
         CabType cabType = CabType.valueOf(type);
 
-        // Autoboxing
+
         Integer passengerId = id;
         Double baseFare = fare;
 
@@ -48,10 +48,10 @@ public class Main {
 
         System.out.println();
 
-        // Display booking summary
+
         System.out.println(booking.getBookingSummary());
 
-        // Inner Class
+
         CabBooking.PickupLocation pickup =
                 booking.new PickupLocation(location);
 
@@ -59,7 +59,7 @@ public class Main {
 
         System.out.println();
 
-        // Anonymous Class
+       
         booking.confirmBooking();
 
         sc.close();
